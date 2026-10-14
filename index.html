@@ -1531,17 +1531,55 @@
 
       // 5. EXAMES E RADIOLOGIA
       {
+     {
         id: "tomo-pacientes",
         categoria: "🖥️ Exames e Radiologia",
         titulo: "Como mandar tomografia para pacientes",
-        videoUrl: "",
+        videoUrl: "https://www.youtube.com/embed/b1vT_I6KcDg",
         conteudo: `
-          <h3>Envio de link / Arquivos da Tomografia</h3>
+          <h3>🔗 Links Rápidos e Arquivo de Instruções</h3>
+          <div class="quick-links-grid">
+            <a href="https://wetransfer.com/" target="_blank" class="quick-link-btn">
+              <div class="quick-link-icon">☁️</div>
+              <div>
+                Abrir WeTransfer
+                <span style="display:block; font-size:0.73rem; color:#94a3b8; font-weight:500;">Subir exame e gerar link</span>
+              </div>
+            </a>
+            <a href="como-abrir-tomografia.pdf" download class="quick-link-btn" style="border-color: rgba(56, 189, 248, 0.6);">
+              <div class="quick-link-icon" style="background: rgba(6, 182, 212, 0.2);">📄</div>
+              <div>
+                Baixar PDF de Instruções
+                <span style="display:block; font-size:0.73rem; color:#38bdf8; font-weight:500;">Enviar junto p/ o paciente</span>
+              </div>
+            </a>
+          </div>
+
+          <h3>📋 Passo a Passo</h3>
           <ol>
-            <li>Localize o exame do paciente na pasta do tomógrafo ou no sistema de imagens.</li>
-            <li>Gere o arquivo compactado (.zip) com o visualizador ou o link direto da nuvem.</li>
-            <li>Envie por e-mail ou WhatsApp usando a mensagem padrão da clínica.</li>
+            <li><strong>Exportar o Exame:</strong> Localize a tomografia do paciente no sistema do tomógrafo e faça a exportação/formatação dos arquivos exatamente como mostrado no vídeo acima.</li>
+            <li><strong>Subir no WeTransfer:</strong> Acesse o <strong>WeTransfer</strong> pelo botão acima, adicione o arquivo exportado da tomografia e gere o link de transferência.</li>
+            <li><strong>Enviar Mensagem + PDF ao Paciente:</strong> Copie a mensagem padrão abaixo (trocando o nome e colando o link do WeTransfer) e envie para o paciente junto com o <strong>PDF de instruções de como baixar e abrir o exame</strong>!</li>
           </ol>
+
+          <h3>💬 Mensagem Padrão para o Paciente</h3>
+          <div class="cam-preset-box" style="background: #0f172a; border-color: rgba(56, 189, 248, 0.35); color: #f8fafc;">
+            <div class="cam-preset-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px; margin-bottom: 14px;">
+              <div class="cam-preset-title" style="color: #38bdf8; font-size: 0.92rem;">📱 Texto para WhatsApp / E-mail</div>
+              <button onclick="navigator.clipboard.writeText(document.getElementById('msgTomoTexto').innerText); this.innerText='✅ Copiado!'; setTimeout(()=>this.innerText='📋 Copiar Mensagem', 2000);" style="background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%); color: #fff; border: none; padding: 7px 14px; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 0.8rem;">
+                📋 Copiar Mensagem
+              </button>
+            </div>
+            <!-- COLE O SEU TEXTO PADRÃO AQUI DENTRO -->
+            <div id="msgTomoTexto" style="font-size: 0.92rem; line-height: 1.65; color: #e2e8f0; white-space: pre-line;">Olá, [NOME DO PACIENTE]! Tudo bem? 😊
+
+Segue abaixo o link para baixar a sua tomografia realizada aqui na Clínica Pazin:
+🔗 [COLAR LINK DO WETRANSFER AQUI]
+
+⚠️ Importante: O link do WeTransfer fica disponível por tempo limitado, então recomendamos baixar os arquivos no computador assim que possível.
+
+Enviei em anexo também um PDF com o passo a passo bem simples de como baixar e abrir o seu exame no computador. Qualquer dúvida, estamos à disposição! 🦷✨</div>
+          </div>
         `
       },
       {
