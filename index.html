@@ -81,4 +81,857 @@
       box-shadow: 0 0 16px rgba(6, 182, 212, 0.4);
     }
 
-    .brand-
+    .brand-text h1 { 
+      font-size: 1.15rem; 
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(90deg, #ffffff 0%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-text span {
+      font-size: 0.72rem;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .search-wrapper {
+      position: relative;
+    }
+
+    .search-box { 
+      width: 100%; 
+      padding: 11px 14px 11px 38px; 
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.2); 
+      border-radius: 10px; 
+      font-size: 0.88rem; 
+      color: #fff;
+      outline: none; 
+      transition: all 0.25s ease;
+    }
+
+    .search-box::placeholder { color: #64748b; }
+    .search-box:focus { 
+      border-color: var(--cyan); 
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+      background: #0f172a;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    .nav-list { flex: 1; overflow-y: auto; padding: 16px; }
+    
+    .category-title { 
+      font-size: 0.7rem; 
+      text-transform: uppercase; 
+      letter-spacing: 0.08em; 
+      color: #38bdf8; 
+      margin: 20px 0 8px 8px; 
+      font-weight: 800; 
+      opacity: 0.9;
+    }
+
+    .nav-item { 
+      padding: 10px 14px; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      font-size: 0.88rem; 
+      margin-bottom: 4px; 
+      transition: all 0.2s ease; 
+      color: #cbd5e1;
+      border-left: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-item:hover { 
+      background: rgba(255, 255, 255, 0.05); 
+      color: #ffffff;
+      transform: translateX(3px);
+    }
+
+    .nav-item.active { 
+      background: linear-gradient(90deg, rgba(37, 99, 235, 0.25) 0%, rgba(6, 182, 212, 0.05) 100%);
+      color: #ffffff; 
+      font-weight: 600; 
+      border-left: 3px solid var(--cyan);
+      box-shadow: inset 0 0 12px rgba(6, 182, 212, 0.1);
+    }
+
+    /* ==========================================
+       ÁREA DE CONTEÚDO PRINCIPAL
+       ========================================== */
+    .main-content { 
+      flex: 1; 
+      overflow-y: auto; 
+      padding: 36px 48px; 
+    }
+
+    .tutorial-container { 
+      max-width: 1020px; 
+      margin: 0 auto; 
+      background: var(--card-bg); 
+      border-radius: 18px; 
+      box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.03); 
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      overflow: hidden;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero Banner do Tutorial */
+    .tutorial-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0284c7 100%);
+      padding: 32px 40px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tutorial-hero::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(56,189,248,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .badge { 
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px; 
+      background: rgba(56, 189, 248, 0.18); 
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #7dd3fc; 
+      border-radius: 99px; 
+      font-size: 0.75rem; 
+      font-weight: 700; 
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px; 
+    }
+
+    .tutorial-title { 
+      font-size: 1.7rem; 
+      font-weight: 800;
+      color: #ffffff; 
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .tutorial-body {
+      padding: 36px 40px;
+    }
+
+    /* Player de Vídeo Tech */
+    .video-container { 
+      margin: 0 0 30px 0; 
+      position: relative; 
+      padding-bottom: 52%; 
+      height: 0; 
+      overflow: hidden; 
+      border-radius: 14px; 
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25);
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+    }
+
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    
+    .video-placeholder { 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #94a3b8; 
+      font-size: 0.95rem; 
+      text-align: center; 
+      padding: 24px; 
+      width: 90%;
+    }
+
+    .play-icon-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin: 0 auto 12px;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    }
+
+    /* Textos e Listas */
+    .steps-content { line-height: 1.7; font-size: 0.98rem; color: var(--text-body); }
+    
+    .steps-content h3 { 
+      margin: 28px 0 14px; 
+      color: var(--text-dark); 
+      font-size: 1.15rem; 
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .steps-content h3::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 20px;
+      background: linear-gradient(180deg, var(--primary) 0%, var(--cyan) 100%);
+      border-radius: 4px;
+    }
+
+    .steps-content h3:first-child { margin-top: 0; }
+
+    /* Lista numerada estilizada */
+    .steps-content ol { 
+      list-style: none; 
+      counter-reset: step-counter; 
+      margin-bottom: 20px; 
+    }
+
+    .steps-content ol li { 
+      counter-increment: step-counter;
+      position: relative;
+      padding: 12px 16px 12px 50px;
+      background: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: all 0.2s;
+    }
+
+    .steps-content ol li:hover {
+      border-color: #bae6fd;
+      background: #f0f9ff;
+    }
+
+    .steps-content ol li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--cyan) 100%);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    }
+
+    .steps-content ul { margin-left: 20px; margin-bottom: 20px; }
+    .steps-content ul li { margin-bottom: 8px; }
+
+    /* Caixas de Alerta Tech */
+    .alert-box { 
+      background: linear-gradient(90deg, #fffbeb 0%, #fef3c7 100%); 
+      border-left: 4px solid #f59e0b; 
+      padding: 14px 18px; 
+      border-radius: 10px; 
+      margin: 20px 0; 
+      font-size: 0.94rem; 
+      color: #92400e;
+    }
+
+    .info-box { 
+      background: linear-gradient(90deg, #eff6ff 0%, #e0f2fe 100%); 
+      border-left: 4px solid var(--primary); 
+      padding: 16px 20px; 
+      border-radius: 10px; 
+      margin: 0 0 24px 0; 
+      font-size: 0.95rem; 
+      color: #1e3a8a;
+    }
+
+    /* Tabelas Modernas */
+    .table-responsive { 
+      overflow-x: auto; 
+      margin: 16px 0 28px; 
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left; }
+    
+    th { 
+      background: #0f172a; 
+      color: #f8fafc; 
+      font-weight: 700; 
+      text-transform: uppercase;
+      font-size: 0.74rem;
+      letter-spacing: 0.05em;
+      padding: 13px 15px;
+      border-bottom: 2px solid var(--cyan);
+    }
+
+    td { 
+      border-bottom: 1px solid var(--border-light); 
+      padding: 13px 15px; 
+      vertical-align: middle; 
+      color: var(--text-body);
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    tr:hover td { background-color: #f0f9ff; }
+
+    /* Pílulas e Destaques */
+    .room-pill {
+      display: inline-block;
+      padding: 3px 9px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin: 2px 0;
+    }
+
+    .conv-tag {
+      display: inline-block;
+      padding: 3px 9px;
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin: 2px 3px 2px 0;
+    }
+
+    .highlight-red { 
+      display: inline-block;
+      background: #fee2e2;
+      color: #dc2626; 
+      font-weight: 800; 
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+    }
+
+    .highlight-blue {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #4338ca;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu Lateral Dark Tech -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand">
+        <div class="brand-icon">🦷</div>
+        <div class="brand-text">
+          <h1>Clínica Pazin</h1>
+          <span>Academy & Operações</span>
+        </div>
+      </div>
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-box" placeholder="Buscar tutorial, doutor, sala...">
+      </div>
+    </div>
+    <div class="nav-list" id="navList"></div>
+  </aside>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <div class="tutorial-container" id="tutorialDisplay"></div>
+  </main>
+
+  <script>
+    // =========================================================================
+    // LISTA DE PÁGINAS E TUTORIAIS
+    // =========================================================================
+    const tutoriais = [
+      // 1. PÁGINA INICIAL (GUIA OPERACIONAL)
+      {
+        id: "inicio-guia",
+        categoria: "⚡ Central Operacional",
+        titulo: "Guia Operacional e Escala de Dentistas (Recepção Centro)",
+        semVideo: true,
+        conteudo: `
+          <div class="info-box">
+            🚀 <strong>Bem-vindo(a) ao Portal Operacional!</strong> Consulte rapidamente horários, salas, especialidades de cada dentista e as regras de agendamento das unidades. Use a barra de busca à esquerda para filtrar qualquer informação em tempo real.
+          </div>
+
+          <h3>Escala de Dentistas, Horários e Salas — Unidade Centro</h3>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Dentista</th>
+                  <th>Dias e Horários</th>
+                  <th>Almoço</th>
+                  <th>Sala</th>
+                  <th>Procedimentos e Especialidades</th>
+                  <th>Idade Mínima</th>
+                  <th>Observações Importantes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Dra. Aline</strong></td>
+                  <td>Terça a Sexta<br>09:00 às 11:30 | 12:30 às 16:00</td>
+                  <td>12:00 às 12:30</td>
+                  <td><span class="room-pill">Sala 1201</span></td>
+                  <td>Clínico, extrações (exo), prótese, facetas em resina, limpeza de protocolo.</td>
+                  <td>A partir de 4 anos</td>
+                  <td>Início dos atendimentos sempre às 09:00.</td>
+                </tr>
+                <tr>
+                  <td><strong>Dr. Nicholas</strong></td>
+                  <td>Segunda, Quarta e Sexta<br>08:30 às 16:30</td>
+                  <td>11:30 às 12:00</td>
+                  <td><span class="room-pill">Sala 1206</span></td>
+                  <td>Clínico, extrações (exo), sisos, implante, prótese, limpeza de protocolo.</td>
+                  <td>A partir de 12 anos</td>
+                  <td>Não atende público infantil abaixo de 12 anos.</td>
+                </tr>
+                <tr>
+                  <td><strong>Dra. Doris</strong></td>
+                  <td>Seg a Qui: 08:30 às 16:00<br>Sexta: 13:30 às 16:00</td>
+                  <td>11:30 às 13:30</td>
+                  <td><span class="room-pill">Sala 1204</span></td>
+                  <td>Manutenção ortodôntica, clínico geral, avaliação de ortodontia.</td>
+                  <td>A partir de 4 anos</td>
+                  <td><span class="highlight-blue">Sexta à tarde: APENAS Invisalign</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Dr. Roberto</strong></td>
+                  <td>Segunda a Sexta<br>08:00 às 16:00</td>
+                  <td>12:00 às 13:20</td>
+                  <td><span class="room-pill">Sala 1205</span></td>
+                  <td>Implantes, protocolos, clínico geral.</td>
+                  <td>Adultos</td>
+                  <td><span class="highlight-red">NÃO FAZ LIMPEZA</span><br>Quartas e sextas preferencialmente cirurgias.</td>
+                </tr>
+                <tr>
+                  <td><strong>Dra. Alessandra</strong></td>
+                  <td>Segunda a Quinta<br>08:30 às 16:30</td>
+                  <td>Sem pausa</td>
+                  <td>
+                    Seg: <span class="room-pill">1201</span><br>
+                    Ter: <span class="room-pill">1206</span><br>
+                    Qua: <span class="room-pill">1203</span><br>
+                    Qui: <span class="room-pill">1206</span>
+                  </td>
+                  <td>Tratamento de canal (endo), clínico, aparelhos (orto), extrações, avaliação de orto.</td>
+                  <td>A partir de 4 anos</td>
+                  <td>⚠️ Atenção à rotação diária de salas.</td>
+                </tr>
+                <tr>
+                  <td><strong>Dr. Rafael</strong></td>
+                  <td>Seg, Ter, Qui e Sex<br>08:30 às 18:30</td>
+                  <td>Sem pausa</td>
+                  <td><span class="room-pill">Sala 1203</span></td>
+                  <td>Tratamento de canal (endo), clínico, aparelhos (orto), extrações, Invisalign, facetas, avaliação de orto.</td>
+                  <td>Adolescentes/adultos.<br>Crianças para aparelho.</td>
+                  <td>✨ Horário estendido até as 18:30.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Regras Gerais de Agendamento</h3>
+          <ol>
+            <li><strong>Clareamento e Avaliação Geral:</strong> Todos os dentistas realizam normalmente.</li>
+            <li><strong>Avaliação de Ortodontia (Aparelho):</strong> Realizada exclusivamente por <strong>Dra. Doris, Dr. Rafael e Dra. Alessandra</strong>.</li>
+            <li><strong>Fidelidade Ortodôntica:</strong> Paciente de aparelho (manutenções e tratamentos ortodônticos) deve ser mantido <strong>SEMPRE com o mesmo dentista</strong>.</li>
+          </ol>
+
+          <h3>Equipe de Outras Unidades</h3>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Unidade Jardim do Sol</th>
+                  <th>Unidade Cassino</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>• Dr. Roberto Junior &nbsp;|&nbsp; • Dr. Murillo &nbsp;|&nbsp; • Dra. Leilah &nbsp;|&nbsp; • Dra. Yasmim &nbsp;|&nbsp; • Dr. Wilson</td>
+                  <td>• Dr. Rhavyer &nbsp;|&nbsp; • Dr. Igor &nbsp;|&nbsp; • Dra. Lilian</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Convênios Atendidos e Encaminhamentos</h3>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Unidade</th>
+                  <th>Convênios Aceitos</th>
+                  <th>Conduta para a Recepção</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Clínica Centro</strong></td>
+                  <td>
+                    <span class="conv-tag">Amil</span>
+                    <span class="conv-tag">Odontoempresas</span>
+                    <span class="conv-tag">Sameisa</span>
+                    <span class="conv-tag">Petrobras</span>
+                    <span class="conv-tag">Cabergs</span>
+                  </td>
+                  <td>Agendamento liberado diretamente no sistema para as agendas do Centro conforme escala.</td>
+                </tr>
+                <tr>
+                  <td><strong>Clínica Jardim do Sol</strong></td>
+                  <td>
+                    <span class="conv-tag">Odontoprev</span>
+                    <span class="conv-tag">Bradesco Dental</span>
+                    <span class="conv-tag">BB Dental</span>
+                    <br><small>+ todos os convênios do Centro</small>
+                  </td>
+                  <td><strong>Conduta:</strong> Repassar o contato/telefone da unidade Jardim do Sol para o paciente agendar diretamente com a equipe de lá.</td>
+                </tr>
+                <tr>
+                  <td><strong>Clínica Cassino</strong></td>
+                  <td>
+                    <span class="conv-tag">Amil</span>
+                    <span class="conv-tag">Sameisa</span>
+                    <span class="conv-tag">Petrobras</span>
+                    <span class="conv-tag">Cabergs</span>
+                  </td>
+                  <td><strong>Conduta:</strong> Repassar o contato/telefone da unidade para o paciente agendar diretamente com a equipe de lá.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        `
+      },
+
+      // 2. ORTODONTIA POR CONVÊNIO (Sem Odontoprev)
+      {
+        id: "orto-amil",
+        categoria: "🦷 Ortodontia (Pastas)",
+        titulo: "Abrir Pasta de Orto — Amil",
+        videoUrl: "",
+        conteudo: `
+          <h3>Passo a passo — Amil Dental</h3>
+          <ol>
+            <li>Acesse o portal da Amil Dental e faça login com os dados da clínica.</li>
+            <li>Verifique a elegibilidade do paciente para cobertura ortodôntica.</li>
+            <li>Solicite os códigos de documentação e instalação/manutenção conforme o plano.</li>
+            <li>Anexe a documentação inicial exigida e colete a assinatura na guia física.</li>
+          </ol>
+          <div class="alert-box">⚠️ <strong>Lembrete Crítico:</strong> Conferir se todas as guias estão assinadas pelo paciente antes de guardar na pasta!</div>
+        `
+      },
+      {
+        id: "orto-odontoempresas",
+        categoria: "🦷 Ortodontia (Pastas)",
+        titulo: "Abrir Pasta de Orto — Odontoempresas",
+        videoUrl: "",
+        conteudo: `
+          <h3>Passo a passo — Odontoempresas</h3>
+          <ol>
+            <li>Acesse o portal da Odontoempresas com login e senha da clínica.</li>
+            <li>Consulte a carteirinha do paciente e verifique a liberação para ortodontia.</li>
+            <li>Lance o código de abertura/manutenção e anexe as imagens radiográficas e fotos iniciais.</li>
+            <li>Imprima a guia para assinatura do paciente e arquive na pasta física.</li>
+          </ol>
+        `
+      },
+      {
+        id: "orto-petrobras",
+        categoria: "🦷 Ortodontia (Pastas)",
+        titulo: "Abrir Pasta de Orto — Petrobras",
+        videoUrl: "",
+        conteudo: `
+          <h3>Passo a passo — Petrobras</h3>
+          <ol>
+            <li>Acesse o portal da Petrobras e confira os requisitos de perícia inicial do plano.</li>
+            <li>Cadastre o planejamento ortodôntico completo enviado pelo ortodontista (Dra. Doris, Dr. Rafael ou Dra. Alessandra).</li>
+            <li>Anexe a documentação ortodôntica completa e aguarde a autorização prévia antes de iniciar as manutenções.</li>
+          </ol>
+        `
+      },
+
+      // 3. GLOSAS E RECURSOS POR CONVÊNIO
+      {
+        id: "glosas-geral",
+        categoria: "📑 Glosas e Recursos",
+        titulo: "Guia Geral de Glosas (Como tirar e analisar)",
+        videoUrl: "",
+        conteudo: `
+          <h3>O que é glosa e como identificar</h3>
+          <ol>
+            <li>Todo mês, baixe o demonstrativo de pagamento/faturamento de cada convênio.</li>
+            <li>Filtre pelos procedimentos com status <strong>"Glosado"</strong> ou pagamento recusado.</li>
+            <li>Anote o código do motivo da glosa (ex: falta de assinatura, raio-x final ausente, rasura na data, código incompatível).</li>
+            <li>Separe a ficha clínica, a guia física original e as imagens do paciente para montar o recurso no portal específico do convênio.</li>
+          </ol>
+          <div class="alert-box">💡 <strong>Atenção aos prazos:</strong> Cada convênio tem um prazo limite após o fechamento do demonstrativo para aceitar o recurso!</div>
+        `
+      },
+      {
+        id: "glosas-amil",
+        categoria: "📑 Glosas e Recursos",
+        titulo: "Glosas — Amil",
+        videoUrl: "",
+        conteudo: `
+          <h3>Como tirar e recursar glosas na Amil</h3>
+          <ol>
+            <li>No portal da Amil, acesse a aba <strong>Faturamento / Demonstrativos</strong> e localize o lote com glosa.</li>
+            <li>Verifique a justificativa da Amil para cada item recusado.</li>
+            <li>Clique na opção de <strong>Recurso de Glosa</strong>, digite a justificativa técnica e anexe o documento corrigido (guia digitalizada ou raio-x).</li>
+            <li>Salve o protocolo do recurso na planilha de controle.</li>
+          </ol>
+        `
+      },
+      {
+        id: "glosas-odontoprev",
+        categoria: "📑 Glosas e Recursos",
+        titulo: "Glosas — Odontoprev",
+        videoUrl: "",
+        conteudo: `
+          <h3>Como tirar e recursar glosas na Odontoprev</h3>
+          <ol>
+            <li>Acesse o Portal Odontoprev (Rede Credenciada) e entre em <strong>Demonstrativo de Pagamento</strong>.</li>
+            <li>Consulte as GTOs que apresentaram glosa técnica ou administrativa.</li>
+            <li>Acesse a aba de <strong>Recurso de Glosa Online</strong>, selecione a GTO correspondente, anexe as imagens/laudos solicitados pelo auditor e envie.</li>
+          </ol>
+        `
+      },
+      {
+        id: "glosas-odontoempresas",
+        categoria: "📑 Glosas e Recursos",
+        titulo: "Glosas — Odontoempresas",
+        videoUrl: "",
+        conteudo: `
+          <h3>Como tirar e recursar glosas na Odontoempresas</h3>
+          <ol>
+            <li>Entre no portal da Odontoempresas e baixe o relatório de glosas do mês.</li>
+            <li>Confira se a glosa foi por imagem ou preenchimento de guia.</li>
+            <li>Abra a solicitação de revisão/recurso anexando a guia assinada sem rasuras e o raio-x inicial/final legível.</li>
+          </ol>
+        `
+      },
+      {
+        id: "glosas-petrobras",
+        categoria: "📑 Glosas e Recursos",
+        titulo: "Glosas — Petrobras",
+        videoUrl: "",
+        conteudo: `
+          <h3>Como tirar e recursar glosas na Petrobras</h3>
+          <ol>
+            <li>Acesse o portal de faturamento da Petrobras e localize o demonstrativo de análise de contas.</li>
+            <li>Verifique o código de glosa apontado pela auditoria.</li>
+            <li>Gere o lote de recurso anexando a justificativa clínica assinada pelo dentista e os documentos comprobatórios.</li>
+          </ol>
+        `
+      },
+
+      // 4. EXAMES E RADIOLOGIA
+      {
+        id: "tomo-pacientes",
+        categoria: "🖥️ Exames e Radiologia",
+        titulo: "Como mandar tomografia para pacientes",
+        videoUrl: "",
+        conteudo: `
+          <h3>Envio de link / Arquivos da Tomografia</h3>
+          <ol>
+            <li>Localize o exame do paciente na pasta do tomógrafo ou no sistema de imagens.</li>
+            <li>Gere o arquivo compactado (.zip) com o visualizador ou o link direto da nuvem.</li>
+            <li>Envie por e-mail ou WhatsApp usando a mensagem padrão da clínica.</li>
+          </ol>
+        `
+      },
+      {
+        id: "laudo-tomo",
+        categoria: "🖥️ Exames e Radiologia",
+        titulo: "Como solicitar laudo de tomografia",
+        videoUrl: "",
+        conteudo: `
+          <h3>Passo a passo para solicitação</h3>
+          <ol>
+            <li>Acesse a plataforma de telerradiologia parceira da clínica.</li>
+            <li>Suba os arquivos DICOM da tomografia realizada.</li>
+            <li>Preencha a indicação clínica informada pelo dentista (ex: pesquisa de fratura, planejamento de implante).</li>
+            <li>Confira o prazo de entrega e anote na agenda para acompanhar.</li>
+          </ol>
+        `
+      },
+
+      // 5. CLÍNICO E PRÓTESE
+      {
+        id: "fotos-protetico",
+        categoria: "📸 Clínico e Prótese",
+        titulo: "Padrão de fotografia e configurações da câmera (Fotos pro Protético)",
+        videoUrl: "",
+        conteudo: `
+          <h3>Configurações Padrão da Câmera</h3>
+          <ol>
+            <li><strong>Modo da Câmera:</strong> Manual (M)</li>
+            <li><strong>Velocidade (Shutter):</strong> 1/125 ou 1/160</li>
+            <li><strong>Abertura (F):</strong> F22 (para fotos intraorais com tomada de cor) e F8 (para rosto/sorriso)</li>
+            <li><strong>ISO:</strong> 100 ou 200</li>
+          </ol>
+          <h3>Sequência de Fotos para o Protético</h3>
+          <ol>
+            <li>Sorriso frontal e perfil (sem afastador).</li>
+            <li>Frontal com afastador (dentes entreabertos para ver borda incisal).</li>
+            <li>Foto com a escala de cor posicionada na mesma altura e inclinação do dente (com numeração da escala visível!).</li>
+          </ol>
+        `
+      },
+
+      // 6. FINANCEIRO E COMPRAS
+      {
+        id: "cotacao-dental",
+        categoria: "💰 Financeiro e Compras",
+        titulo: "Cotação da Dental Shop",
+        videoUrl: "",
+        conteudo: `
+          <h3>Como fazer a lista e cotar</h3>
+          <ol>
+            <li>Confira a lista de materiais em falta na planilha de estoque.</li>
+            <li>Entre no site/WhatsApp da Dental Shop e envie a relação com marca e quantidade exata.</li>
+            <li>Verifique se há promoção de pacotes (ex: resinas, anestésicos) e passe o valor final para aprovação antes de fechar o pedido.</li>
+          </ol>
+        `
+      },
+      {
+        id: "planilha-caixa",
+        categoria: "💰 Financeiro e Compras",
+        titulo: "Abrir planilha de caixa mensal e anual",
+        videoUrl: "",
+        conteudo: `
+          <h3>Rotina de Abertura de Caixa</h3>
+          <ol>
+            <li>Acesse o Google Drive / Pasta do Financeiro.</li>
+            <li>Na virada do mês, duplique a aba do mês anterior na planilha anual e renomeie para o mês atual.</li>
+            <li>Zere os lançamentos mantendo as fórmulas de soma e saldo inicial.</li>
+            <li>Confira diariamente se os lançamentos em dinheiro, PIX e cartão batem com as maquininhas.</li>
+          </ol>
+        `
+      }
+    ];
+
+    // =========================================================================
+    // LÓGICA DO SISTEMA
+    // =========================================================================
+    const navList = document.getElementById('navList');
+    const tutorialDisplay = document.getElementById('tutorialDisplay');
+    const searchInput = document.getElementById('searchInput');
+    let activeId = tutoriais[0].id;
+
+    function renderMenu(filtro = "") {
+      navList.innerHTML = "";
+      const categorias = [...new Set(tutoriais.map(t => t.categoria))];
+
+      categorias.forEach(cat => {
+        const itensFiltrados = tutoriais.filter(t => 
+          t.categoria === cat && 
+          (t.titulo.toLowerCase().includes(filtro.toLowerCase()) || t.conteudo.toLowerCase().includes(filtro.toLowerCase()))
+        );
+
+        if (itensFiltrados.length > 0) {
+          const catTitle = document.createElement('div');
+          catTitle.className = 'category-title';
+          catTitle.textContent = cat;
+          navList.appendChild(catTitle);
+
+          itensFiltrados.forEach(item => {
+            const navItem = document.createElement('div');
+            navItem.className = `nav-item ${item.id === activeId ? 'active' : ''}`;
+            navItem.innerHTML = `<span>${item.titulo}</span>`;
+            navItem.onclick = () => selecionarTutorial(item.id);
+            navList.appendChild(navItem);
+          });
+        }
+      });
+    }
+
+    function selecionarTutorial(id) {
+      activeId = id;
+      const tut = tutoriais.find(t => t.id === id);
+      renderMenu(searchInput.value);
+
+      let videoHtml = "";
+      if (!tut.semVideo) {
+        if (tut.videoUrl) {
+          videoHtml = `<div class="video-container"><iframe src="${tut.videoUrl}" allowfullscreen></iframe></div>`;
+        } else {
+          videoHtml = `
+            <div class="video-container">
+              <div class="video-placeholder">
+                <div class="play-icon-circle">▶</div>
+                <strong>Vídeo Tutorial em Breve</strong><br>
+                <span>Adicione o link da gravação no código para exibir o player aqui</span>
+              </div>
+            </div>`;
+        }
+      }
+
+      tutorialDisplay.innerHTML = `
+        <div class="tutorial-hero">
+          <span class="badge">${tut.categoria}</span>
+          <h2 class="tutorial-title">${tut.titulo}</h2>
+        </div>
+        <div class="tutorial-body">
+          ${videoHtml}
+          <div class="steps-content">${tut.conteudo}</div>
+        </div>
+      `;
+    }
+
+    searchInput.addEventListener('input', (e) => renderMenu(e.target.value));
+
+    // Inicializa o sistema
+    renderMenu();
+    selecionarTutorial(activeId);
+  </script>
+</body>
+</html>
