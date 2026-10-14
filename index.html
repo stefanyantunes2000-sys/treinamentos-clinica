@@ -1253,19 +1253,87 @@
       {
         id: "orto-amil",
         categoria: "🦷 Ortodontia (Pastas)",
-        titulo: "Abrir Pasta de Orto — Amil",
-        videoUrl: "",
+        titulo: "Abrir Pasta de Orto e Prorrogação — Amil",
+        videoUrl: "", // Cole aqui o link embed do vídeo quando gravar
         conteudo: `
-          <h3>Passo a passo — Amil Dental</h3>
+          <h3>🔗 Links Rápidos e Documentos</h3>
+          <div class="quick-links-grid">
+            <a href="https://credenciado.amildental.com.br/" target="_blank" class="quick-link-btn">
+              <div class="quick-link-icon">🌐</div>
+              <div>
+                Portal Amil Dental
+                <span style="display:block; font-size:0.73rem; color:#94a3b8; font-weight:500;">Login do Credenciado</span>
+              </div>
+            </a>
+            <a href="LINK_DO_IDOC_AQUI" target="_blank" class="quick-link-btn">
+              <div class="quick-link-icon">🩻</div>
+              <div>
+                Acessar iDoc (Imaginos)
+                <span style="display:block; font-size:0.73rem; color:#94a3b8; font-weight:500;">Baixar exames e panorâmica</span>
+              </div>
+            </a>
+            <a href="formulario-amil.pdf" target="_blank" class="quick-link-btn">
+              <div class="quick-link-icon">🖨️</div>
+              <div>
+                Formulário de Planejamento
+                <span style="display:block; font-size:0.73rem; color:#94a3b8; font-weight:500;">Imprimir para o dentista</span>
+              </div>
+            </a>
+          </div>
+
+          <h3>📋 Passo a Passo: Abertura de Pasta Inicial</h3>
           <ol>
-            <li>Acesse o portal da Amil Dental e faça login com os dados da clínica.</li>
-            <li>Verifique a elegibilidade do paciente para cobertura ortodôntica.</li>
-            <li>Solicite os códigos de documentação e instalação/manutenção conforme o plano.</li>
-            <li>Anexe a documentação inicial exigida e colete a assinatura na guia física.</li>
+            <li><strong>Imprimir o Formulário:</strong> Imprima o formulário de planejamento pelo botão acima e entregue ao dentista responsável junto com a ficha e o <strong>nome completo do paciente</strong> para ele preencher o planejamento do caso.</li>
+            <li><strong>Baixar Exames no iDoc:</strong> Com o formulário preenchido pelo dentista em mãos, entre no <strong>iDoc</strong> e baixe os arquivos da documentação do paciente (conforme o exemplo abaixo).</li>
+            <li><strong>Lançar no Portal da Amil:</strong> Faça login na Amil Dental e siga o passo a passo do vídeo acima: anexe os arquivos baixados do iDoc, transcreva os dados do formulário preenchido pelo dentista e envie a documentação para análise.</li>
+            <li><strong>Acompanhar Aprovação (3 dias) + Token:</strong> Aguarde <strong>3 dias</strong> e entre novamente no portal da Amil para verificar se foi aprovado. Estando aprovado:
+              <br>• Solicite o <strong>Token</strong> ao paciente;
+              <br>• Confirme o token novamente no site da Amil;
+              <br>• Agende o paciente para a <strong>colagem do aparelho</strong>!
+            </li>
           </ol>
-          <div class="alert-box">⚠️ <strong>Lembrete Crítico:</strong> Conferir se todas as guias estão assinadas pelo paciente antes de guardar na pasta!</div>
+
+          <div class="photo-gallery-grid" style="max-width: 340px; margin-top: 10px;">
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="exemplo-idoc-amil.jpg" alt="Exemplo de arquivos iDoc"> -->
+                <div class="photo-preview-icon">📂</div>
+                <strong>Exemplo de Arquivos no iDoc</strong>
+                <span class="photo-preview-hint">exemplo-idoc-amil.jpg</span>
+              </div>
+              <div class="photo-slot-caption">Padrão de arquivos para baixar no iDoc<span>Suba um print com esse nome no GitHub</span></div>
+            </div>
+          </div>
+
+          <div class="alert-box">
+            ❌ <strong>Caso NÃO seja aprovado (Negativa):</strong><br>
+            A Amil sempre descreve o motivo da recusa no final da documentação. Verifique o motivo apontado e converse com o dentista responsável para que ele faça o termo de justificativa, converse com o paciente ou alinhe a conduta necessária.
+          </div>
+
+          <h3>🔄 Como fazer Prorrogação de Tratamento em Andamento</h3>
+          <div class="info-box">
+            📊 <strong>Limite Máximo da Amil:</strong> A Amil aprova no máximo <strong>60 manutenções</strong> no total por paciente. Se o paciente já atingiu 60 manutenções, <strong>não é mais possível</strong> solicitar prorrogação pelo convênio.
+          </div>
+
+          <ol>
+            <li><strong>1ª Prorrogação (Apenas Panorâmica):</strong> Solicite que o paciente realize uma <strong>nova radiografia panorâmica na Imaginos</strong>. Assim que o exame estiver pronto no iDoc, entre no site da Amil e tente lançar uma manutenção normal — o próprio sistema vai exibir o aviso perguntando se você deseja <strong>solicitar mais manutenções</strong>. Clique para solicitar e anexe a panorâmica nova.</li>
+            <li><strong>2ª Prorrogação em diante (Fotos Intrabucais + Termo):</strong> Quando já é a segunda vez prorrogando, a Amil exige:
+              <br>• <strong>Fotos intrabucais em consultório:</strong> Tirar fotos da oclusão do paciente <strong>com afastador</strong> (Frontal, Direita e Esquerda — exatamente o mesmo padrão do modelo Invisalign);
+              <br>• <strong>Termo de Planejamento (quando solicitado):</strong> Peça ao dentista responsável que elabore o termo atualizado (eles já sabem como fazer) e suba tudo junto no portal.
+            </li>
+          </ol>
+
+          <div style="margin-top: 16px;">
+            <button onclick="selecionarTutorial('fotos-invisalign')" class="quick-link-btn" style="cursor: pointer; width: auto; display: inline-flex;">
+              <div class="quick-link-icon">📸</div>
+              <div style="text-align: left;">
+                Ver Modelo de Fotos Intrabucais (Padrão Invisalign)
+                <span style="display:block; font-size:0.73rem; color:#38bdf8; font-weight:500;">Clique aqui para abrir o guia de fotos com afastador →</span>
+              </div>
+            </button>
+          </div>
         `
-      },
+      },,
       {
         id: "orto-odontoempresas",
         categoria: "🦷 Ortodontia (Pastas)",
