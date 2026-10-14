@@ -180,7 +180,7 @@
     }
 
     .tutorial-container { 
-      max-width: 1020px; 
+      max-width: 1040px; 
       margin: 0 auto; 
       background: var(--card-bg); 
       border-radius: 18px; 
@@ -291,7 +291,7 @@
     .steps-content { line-height: 1.7; font-size: 0.98rem; color: var(--text-body); }
     
     .steps-content h3 { 
-      margin: 28px 0 14px; 
+      margin: 30px 0 14px; 
       color: var(--text-dark); 
       font-size: 1.15rem; 
       font-weight: 800;
@@ -357,36 +357,68 @@
     .steps-content ul li { margin-bottom: 8px; }
 
     /* ==========================================
-       PAINEL DE CÂMERA (BOTÕES TECH) & FOTOS MODELO
+       PAINÉIS DE CÂMERA (POR MODO) & FOTOS MODELO
        ========================================== */
+    .cam-preset-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 16px 0 24px;
+    }
+
+    .cam-preset-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cam-preset-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cam-preset-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
     .camera-dial-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 16px 0 32px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
     }
 
     .camera-btn-card {
       background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
       border: 1px solid rgba(56, 189, 248, 0.3);
       border-radius: 14px;
-      padding: 18px 16px;
+      padding: 16px 14px;
       text-align: center;
       color: #fff;
-      box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      box-shadow: 0 6px 16px -4px rgba(15, 23, 42, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
       transition: transform 0.2s ease, border-color 0.2s ease;
-      position: relative;
-      overflow: hidden;
     }
 
     .camera-btn-card:hover {
       transform: translateY(-3px);
       border-color: var(--cyan);
-      box-shadow: 0 12px 24px -4px rgba(6, 182, 212, 0.25);
+      box-shadow: 0 10px 22px -4px rgba(6, 182, 212, 0.25);
     }
 
     .camera-btn-label {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #94a3b8;
@@ -397,30 +429,42 @@
 
     .camera-btn-value {
       display: inline-block;
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-weight: 800;
       color: #38bdf8;
       background: rgba(6, 182, 212, 0.12);
       border: 1px solid rgba(56, 189, 248, 0.35);
-      padding: 6px 18px;
+      padding: 5px 16px;
       border-radius: 10px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       text-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
     }
 
     .camera-btn-sub {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #cbd5e1;
       display: block;
-      line-height: 1.35;
+      line-height: 1.3;
     }
 
     /* Galeria de Fotos Modelo */
+    .photo-section-subtitle {
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      margin: 22px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .photo-gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
-      margin: 18px 0 28px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 12px 0 26px;
     }
 
     .photo-slot-card {
@@ -440,13 +484,13 @@
     }
 
     .photo-preview-box {
-      height: 175px;
+      height: 155px;
       background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 16px;
+      padding: 12px;
       text-align: center;
       color: #1e40af;
       position: relative;
@@ -462,33 +506,37 @@
     }
 
     .photo-preview-icon {
-      font-size: 2rem;
-      margin-bottom: 6px;
+      font-size: 1.7rem;
+      margin-bottom: 4px;
     }
 
     .photo-preview-hint {
-      font-size: 0.75rem;
-      color: #3b82f6;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 4px 10px;
+      font-size: 0.7rem;
+      color: #2563eb;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 3px 8px;
       border-radius: 6px;
-      font-weight: 600;
-      margin-top: 6px;
+      font-weight: 700;
+      margin-top: 5px;
     }
 
     .photo-slot-caption {
-      padding: 12px 14px;
+      padding: 10px 12px;
       background: #ffffff;
       border-top: 1px solid var(--border-light);
-      font-size: 0.86rem;
+      font-size: 0.83rem;
       font-weight: 700;
       color: var(--text-dark);
       text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .photo-slot-caption span {
       display: block;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 500;
       color: var(--text-muted);
       margin-top: 2px;
@@ -775,7 +823,391 @@
         `
       },
 
-      // 2. ORTODONTIA POR CONVÊNIO (Sem Odontoprev)
+      // 2. FOTOGRAFIA ODONTOLÓGICA (PRÓTESE + INVISALIGN/ORTO)
+      {
+        id: "fotos-protetico",
+        categoria: "📸 Padrão de Fotografia",
+        titulo: "Fotografia: Prótese e Tomada de Cor (7 Fotos)",
+        semVideo: true,
+        conteudo: `
+          <div class="info-box">
+            📸 <strong>Protocolo de Prótese (7 Fotos):</strong> Dividido em 3 configurações de câmera (Rosto, Intrabucal e Tomada de Cor em Consultório). Ajuste os parâmetros no visor antes de cada etapa!
+          </div>
+
+          <h3>🎛️ Configurações da Câmera (3 Modos)</h3>
+
+          <!-- CONFIG 1: ROSTO -->
+          <div class="cam-preset-box">
+            <div class="cam-preset-header">
+              <div class="cam-preset-title">🧑 Configuração 1: Rosto / Extraoral</div>
+              <span class="cam-preset-tag">Fotos 1 a 3</span>
+            </div>
+            <div class="camera-dial-grid">
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Modo no Dial</span>
+                <div class="camera-btn-value">M</div>
+                <span class="camera-btn-sub">Manual</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Velocidade</span>
+                <div class="camera-btn-value">1/125</div>
+                <span class="camera-btn-sub">ou 1/160</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Abertura (F)</span>
+                <div class="camera-btn-value">F8</div>
+                <span class="camera-btn-sub">Foco em todo o rosto</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">ISO</span>
+                <div class="camera-btn-value">100</div>
+                <span class="camera-btn-sub">ou 200</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONFIG 2: INTRABUCAL -->
+          <div class="cam-preset-box">
+            <div class="cam-preset-header">
+              <div class="cam-preset-title">👄 Configuração 2: Intrabucal (Com Afastador)</div>
+              <span class="cam-preset-tag">Fotos 4 a 6</span>
+            </div>
+            <div class="camera-dial-grid">
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Modo no Dial</span>
+                <div class="camera-btn-value">M</div>
+                <span class="camera-btn-sub">Manual</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Velocidade</span>
+                <div class="camera-btn-value">1/125</div>
+                <span class="camera-btn-sub">ou 1/160</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Abertura (F)</span>
+                <div class="camera-btn-value">F22</div>
+                <span class="camera-btn-sub">ou F25 (Nitidez total)</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">ISO</span>
+                <div class="camera-btn-value">100</div>
+                <span class="camera-btn-sub">ou 200</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONFIG 3: TOMADA DE COR EM CONSULTÓRIO -->
+          <div class="cam-preset-box">
+            <div class="cam-preset-header">
+              <div class="cam-preset-title">🎨 Configuração 3: Tomada de Cor (Em Consultório)</div>
+              <span class="cam-preset-tag">Foto 7 (Com Escala)</span>
+            </div>
+            <div class="camera-dial-grid">
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Modo no Dial</span>
+                <div class="camera-btn-value">M</div>
+                <span class="camera-btn-sub">Manual</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Velocidade</span>
+                <div class="camera-btn-value">1/125</div>
+                <span class="camera-btn-sub">Evita luz do refletor</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Abertura (F)</span>
+                <div class="camera-btn-value">F29 / F32</div>
+                <span class="camera-btn-sub">Sem estourar o branco</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">ISO / Flash</span>
+                <div class="camera-btn-value">ISO 100</div>
+                <span class="camera-btn-sub">Flash 1/2 ou 1/4</span>
+              </div>
+            </div>
+          </div>
+
+          <h3>🖼️ Galeria Modelo — 7 Fotos de Prótese</h3>
+          <p style="margin-bottom: 10px;">Para exibir cada foto modelo, basta subir a imagem no GitHub com o nome indicado na etiqueta azul:</p>
+
+          <div class="photo-gallery-grid">
+            <!-- 1 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="protese-1-rosto-sorriso.jpg" alt="Rosto Sorriso"> -->
+                <div class="photo-preview-icon">📸</div>
+                <strong>Foto 1</strong>
+                <span class="photo-preview-hint">protese-1-rosto-sorriso.jpg</span>
+              </div>
+              <div class="photo-slot-caption">1. Rosto Frontal Sorrindo<span>Config Rosto (Sem afastador)</span></div>
+            </div>
+            <!-- 2 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="protese-2-rosto-repouso.jpg" alt="Rosto Repouso"> -->
+                <div class="photo-preview-icon">📸</div>
+                <strong>Foto 2</strong>
+                <span class="photo-preview-hint">protese-2-rosto-repouso.jpg</span>
+              </div>
+              <div class="photo-slot-caption">2. Rosto / Lábios em Repouso<span>Exposição dos incisivos</span></div>
+            </div>
+            <!-- 3 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="protese-3-sorriso-perfil.jpg" alt="Sorriso Perfil"> -->
+                <div class="photo-preview-icon">📸</div>
+                <strong>Foto 3</strong>
+                <span class="photo-preview-hint">protese-3-sorriso-perfil.jpg</span>
+              </div>
+              <div class="photo-slot-caption">3. Sorriso Perfil / 45°<span>Volume e suporte labial</span></div>
+            </div>
+            <!-- 4 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="protese-4-intra-oclusao.jpg" alt="Intraoral Oclusão"> -->
+                <div class="photo-preview-icon">🦷</div>
+                <strong>Foto 4</strong>
+                <span class="photo-preview-hint">protese-4-intra-oclusao.jpg</span>
+              </div>
+              <div class="photo-slot-caption">4. Frontal com Afastador (Oclusão)<span>Config Intrabucal</span></div>
+            </div>
+            <!-- 5 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="protese-5-intra-entreaberta.jpg" alt="Intraoral Entreaberta"> -->
+                <div class="photo-preview-icon">🦷</div>
+                <strong>Foto 5</strong>
+                <span class="photo-preview-hint">protese-5-intra-entreaberta.jpg</span>
+              </div>
+              <div class="photo-slot-caption">5. Frontal Dentes Entreabertos<span>Com afastador (ver borda incisal)</span></div>
+            </div>
+            <!-- 6 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="protese-6-preparos.jpg" alt="Detalhe Preparos"> -->
+                <div class="photo-preview-icon">🦷</div>
+                <strong>Foto 6</strong>
+                <span class="photo-preview-hint">protese-6-preparos.jpg</span>
+              </div>
+              <div class="photo-slot-caption">6. Arco Superior / Preparos<span>Foco nos dentes trabalhados</span></div>
+            </div>
+            <!-- 7 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="protese-7-escala-cor.jpg" alt="Tomada de Cor"> -->
+                <div class="photo-preview-icon">🎨</div>
+                <strong>Foto 7</strong>
+                <span class="photo-preview-hint">protese-7-escala-cor.jpg</span>
+              </div>
+              <div class="photo-slot-caption">7. Tomada de Cor com Escala<span>Config Cor (Código da escala legível!)</span></div>
+            </div>
+          </div>
+        `
+      },
+      {
+        id: "fotos-invisalign",
+        categoria: "📸 Padrão de Fotografia",
+        titulo: "Fotografia: Invisalign / Aparelho (12 Fotos)",
+        semVideo: true,
+        conteudo: `
+          <div class="info-box">
+            ✨ <strong>Protocolo Ortodôntico & Invisalign (12 Fotos):</strong> Utiliza 2 configurações de câmera (Rosto e Intrabucal). São 6 fotos de rosto (frontal e ambos os perfis) e 6 fotos intraorais (oclusão sem afastador e oclusão com afastador).
+          </div>
+
+          <h3>🎛️ Configurações da Câmera (2 Modos)</h3>
+
+          <!-- CONFIG 1: ROSTO -->
+          <div class="cam-preset-box">
+            <div class="cam-preset-header">
+              <div class="cam-preset-title">🧑 Configuração 1: Rosto / Extraoral</div>
+              <span class="cam-preset-tag">Fotos 1 a 6 (Fundo limpo)</span>
+            </div>
+            <div class="camera-dial-grid">
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Modo no Dial</span>
+                <div class="camera-btn-value">M</div>
+                <span class="camera-btn-sub">Manual</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Velocidade</span>
+                <div class="camera-btn-value">1/125</div>
+                <span class="camera-btn-sub">ou 1/160</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Abertura (F)</span>
+                <div class="camera-btn-value">F8</div>
+                <span class="camera-btn-sub">Foco facial uniforme</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">ISO</span>
+                <div class="camera-btn-value">100</div>
+                <span class="camera-btn-sub">ou 200</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONFIG 2: INTRABUCAL -->
+          <div class="cam-preset-box">
+            <div class="cam-preset-header">
+              <div class="cam-preset-title">🦷 Configuração 2: Intrabucal</div>
+              <span class="cam-preset-tag">Fotos 7 a 12 (Sem e Com Afastador)</span>
+            </div>
+            <div class="camera-dial-grid">
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Modo no Dial</span>
+                <div class="camera-btn-value">M</div>
+                <span class="camera-btn-sub">Manual</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Velocidade</span>
+                <div class="camera-btn-value">1/125</div>
+                <span class="camera-btn-sub">ou 1/160</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">Abertura (F)</span>
+                <div class="camera-btn-value">F22</div>
+                <span class="camera-btn-sub">Foco até os molares</span>
+              </div>
+              <div class="camera-btn-card">
+                <span class="camera-btn-label">ISO</span>
+                <div class="camera-btn-value">100</div>
+                <span class="camera-btn-sub">ou 200</span>
+              </div>
+            </div>
+          </div>
+
+          <h3>🖼️ Galeria Modelo — 12 Fotos Invisalign / Aparelho</h3>
+
+          <div class="photo-section-subtitle">👤 Parte 1: Fotos de Rosto — Frontal e Perfis Direito/Esquerdo (6 Fotos)</div>
+          <div class="photo-gallery-grid">
+            <!-- 1 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-1-frontal-fechada.jpg" alt="Frontal Boca Fechada"> -->
+                <div class="photo-preview-icon">😐</div>
+                <strong>Foto 1</strong>
+                <span class="photo-preview-hint">invisa-1-frontal-fechada.jpg</span>
+              </div>
+              <div class="photo-slot-caption">1. Rosto Frontal<span>Boca fechada (Sério/Repouso)</span></div>
+            </div>
+            <!-- 2 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-2-frontal-sorriso.jpg" alt="Frontal Sorriso"> -->
+                <div class="photo-preview-icon">😁</div>
+                <strong>Foto 2</strong>
+                <span class="photo-preview-hint">invisa-2-frontal-sorriso.jpg</span>
+              </div>
+              <div class="photo-slot-caption">2. Rosto Frontal Sorrindo<span>Sorriso amplo natural</span></div>
+            </div>
+            <!-- 3 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-3-perfil-dir-fechada.jpg" alt="Perfil Direito Fechada"> -->
+                <div class="photo-preview-icon">➡️</div>
+                <strong>Foto 3</strong>
+                <span class="photo-preview-hint">invisa-3-perfil-dir-fechada.jpg</span>
+              </div>
+              <div class="photo-slot-caption">3. Perfil Direito (Fechada)<span>Boca fechada (Cabelo atrás da orelha)</span></div>
+            </div>
+            <!-- 4 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-4-perfil-dir-sorriso.jpg" alt="Perfil Direito Sorriso"> -->
+                <div class="photo-preview-icon">➡️</div>
+                <strong>Foto 4</strong>
+                <span class="photo-preview-hint">invisa-4-perfil-dir-sorriso.jpg</span>
+              </div>
+              <div class="photo-slot-caption">4. Perfil Direito (Sorriso)<span>Sorrindo de perfil</span></div>
+            </div>
+            <!-- 5 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-5-perfil-esq-fechada.jpg" alt="Perfil Esquerdo Fechada"> -->
+                <div class="photo-preview-icon">⬅️</div>
+                <strong>Foto 5</strong>
+                <span class="photo-preview-hint">invisa-5-perfil-esq-fechada.jpg</span>
+              </div>
+              <div class="photo-slot-caption">5. Perfil Esquerdo (Fechada)<span>Boca fechada (Cabelo atrás da orelha)</span></div>
+            </div>
+            <!-- 6 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-6-perfil-esq-sorriso.jpg" alt="Perfil Esquerdo Sorriso"> -->
+                <div class="photo-preview-icon">⬅️</div>
+                <strong>Foto 6</strong>
+                <span class="photo-preview-hint">invisa-6-perfil-esq-sorriso.jpg</span>
+              </div>
+              <div class="photo-slot-caption">6. Perfil Esquerdo (Sorriso)<span>Sorrindo de perfil</span></div>
+            </div>
+          </div>
+
+          <div class="photo-section-subtitle">👄 Parte 2: Oclusão SEM Afastador e Oclusão COM Afastador (6 Fotos)</div>
+          <div class="photo-gallery-grid">
+            <!-- 7 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-7-oclusao-sem-frontal.jpg" alt="Oclusão Sem Afastador Frontal"> -->
+                <div class="photo-preview-icon">👄</div>
+                <strong>Foto 7</strong>
+                <span class="photo-preview-hint">invisa-7-oclusao-sem-frontal.jpg</span>
+              </div>
+              <div class="photo-slot-caption">7. Oclusão Frontal SEM Afastador<span>Puxando lábios com dedos/espelho</span></div>
+            </div>
+            <!-- 8 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-8-oclusao-sem-dir.jpg" alt="Oclusão Sem Afastador Direita"> -->
+                <div class="photo-preview-icon">👄</div>
+                <strong>Foto 8</strong>
+                <span class="photo-preview-hint">invisa-8-oclusao-sem-dir.jpg</span>
+              </div>
+              <div class="photo-slot-caption">8. Oclusão Direita SEM Afastador<span>Mordida fechada lado direito</span></div>
+            </div>
+            <!-- 9 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-9-oclusao-sem-esq.jpg" alt="Oclusão Sem Afastador Esquerda"> -->
+                <div class="photo-preview-icon">👄</div>
+                <strong>Foto 9</strong>
+                <span class="photo-preview-hint">invisa-9-oclusao-sem-esq.jpg</span>
+              </div>
+              <div class="photo-slot-caption">9. Oclusão Esquerda SEM Afastador<span>Mordida fechada lado esquerdo</span></div>
+            </div>
+            <!-- 10 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-10-oclusao-com-frontal.jpg" alt="Oclusão Com Afastador Frontal"> -->
+                <div class="photo-preview-icon">🦷</div>
+                <strong>Foto 10</strong>
+                <span class="photo-preview-hint">invisa-10-oclusao-com-frontal.jpg</span>
+              </div>
+              <div class="photo-slot-caption">10. Oclusão Frontal COM Afastador<span>Dentes ocluídos e centralizados</span></div>
+            </div>
+            <!-- 11 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-11-oclusao-com-dir.jpg" alt="Oclusão Com Afastador Direita"> -->
+                <div class="photo-preview-icon">🦷</div>
+                <strong>Foto 11</strong>
+                <span class="photo-preview-hint">invisa-11-oclusao-com-dir.jpg</span>
+              </div>
+              <div class="photo-slot-caption">11. Oclusão Direita COM Afastador<span>Encaixe de canino e molar visível</span></div>
+            </div>
+            <!-- 12 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="invisa-12-oclusao-com-esq.jpg" alt="Oclusão Com Afastador Esquerda"> -->
+                <div class="photo-preview-icon">🦷</div>
+                <strong>Foto 12</strong>
+                <span class="photo-preview-hint">invisa-12-oclusao-com-esq.jpg</span>
+              </div>
+              <div class="photo-slot-caption">12. Oclusão Esquerda COM Afastador<span>Encaixe de canino e molar visível</span></div>
+            </div>
+          </div>
+        `
+      },
+
+      // 3. ORTODONTIA POR CONVÊNIO (Sem Odontoprev)
       {
         id: "orto-amil",
         categoria: "🦷 Ortodontia (Pastas)",
@@ -822,7 +1254,7 @@
         `
       },
 
-      // 3. GLOSAS E RECURSOS POR CONVÊNIO
+      // 4. GLOSAS E RECURSOS POR CONVÊNIO
       {
         id: "glosas-geral",
         categoria: "📑 Glosas e Recursos",
@@ -897,7 +1329,7 @@
         `
       },
 
-      // 4. EXAMES E RADIOLOGIA
+      // 5. EXAMES E RADIOLOGIA
       {
         id: "tomo-pacientes",
         categoria: "🖥️ Exames e Radiologia",
@@ -924,110 +1356,6 @@
             <li>Suba os arquivos DICOM da tomografia realizada.</li>
             <li>Preencha a indicação clínica informada pelo dentista (ex: pesquisa de fratura, planejamento de implante).</li>
             <li>Confira o prazo de entrega e anote na agenda para acompanhar.</li>
-          </ol>
-        `
-      },
-
-      // 5. CLÍNICO E PRÓTESE (SEM VÍDEO + BOTÕES DE CÂMERA + FOTOS MODELO)
-      {
-        id: "fotos-protetico",
-        categoria: "📸 Clínico e Prótese",
-        titulo: "Padrão de Fotografia e Configurações da Câmera (Protético)",
-        semVideo: true,
-        conteudo: `
-          <h3>🎛️ Painel de Configuração Rápida da Câmera</h3>
-          <p style="margin-bottom: 12px;">Antes de iniciar as fotos, ajuste os botões da câmera exatamente nestes parâmetros:</p>
-          
-          <div class="camera-dial-grid">
-            <div class="camera-btn-card">
-              <span class="camera-btn-label">Modo no Dial</span>
-              <div class="camera-btn-value">M</div>
-              <span class="camera-btn-sub">Modo Manual</span>
-            </div>
-            <div class="camera-btn-card">
-              <span class="camera-btn-label">Velocidade (Shutter)</span>
-              <div class="camera-btn-value">1/125</div>
-              <span class="camera-btn-sub">ou <strong>1/160</strong></span>
-            </div>
-            <div class="camera-btn-card">
-              <span class="camera-btn-label">Abertura (Diafragma)</span>
-              <div class="camera-btn-value">F22 / F8</div>
-              <span class="camera-btn-sub"><strong>F22</strong> Intraoral (Cor)<br><strong>F8</strong> Rosto / Sorriso</span>
-            </div>
-            <div class="camera-btn-card">
-              <span class="camera-btn-label">Sensibilidade ISO</span>
-              <div class="camera-btn-value">100</div>
-              <span class="camera-btn-sub">ou <strong>200</strong> (Luz fixa)</span>
-            </div>
-          </div>
-
-          <h3>🖼️ Galeria de Fotos Modelo (Padrão Protético)</h3>
-          <p style="margin-bottom: 12px;">Siga exatamente os enquadramentos abaixo. <em>(Para exibir a foto real, suba a imagem no GitHub e coloque o nome do arquivo no atributo <code>src</code>)</em>:</p>
-
-          <div class="photo-gallery-grid">
-            <!-- FOTO 1 -->
-            <div class="photo-slot-card">
-              <div class="photo-preview-box">
-                <!-- Quando subir a foto no GitHub, descomente a linha abaixo e troque pelo nome da foto: -->
-                <!-- <img src="foto-sorriso-frontal.jpg" alt="Sorriso Frontal"> -->
-                <div class="photo-preview-icon">📸</div>
-                <strong>Foto Modelo 1</strong>
-                <span class="photo-preview-hint">foto-sorriso-frontal.jpg</span>
-              </div>
-              <div class="photo-slot-caption">
-                1. Sorriso Frontal
-                <span>Sem afastador (espontâneo)</span>
-              </div>
-            </div>
-
-            <!-- FOTO 2 -->
-            <div class="photo-slot-card">
-              <div class="photo-preview-box">
-                <!-- <img src="foto-sorriso-perfil.jpg" alt="Sorriso Perfil"> -->
-                <div class="photo-preview-icon">📸</div>
-                <strong>Foto Modelo 2</strong>
-                <span class="photo-preview-hint">foto-sorriso-perfil.jpg</span>
-              </div>
-              <div class="photo-slot-caption">
-                2. Sorriso Perfil / 45°
-                <span>Sem afastador (volume labial)</span>
-              </div>
-            </div>
-
-            <!-- FOTO 3 -->
-            <div class="photo-slot-card">
-              <div class="photo-preview-box">
-                <!-- <img src="foto-afastador.jpg" alt="Com Afastador"> -->
-                <div class="photo-preview-icon">🦷</div>
-                <strong>Foto Modelo 3</strong>
-                <span class="photo-preview-hint">foto-afastador.jpg</span>
-              </div>
-              <div class="photo-slot-caption">
-                3. Frontal com Afastador
-                <span>Dentes levemente entreabertos</span>
-              </div>
-            </div>
-
-            <!-- FOTO 4 -->
-            <div class="photo-slot-card">
-              <div class="photo-preview-box">
-                <!-- <img src="foto-escala-cor.jpg" alt="Tomada de Cor"> -->
-                <div class="photo-preview-icon">🎨</div>
-                <strong>Foto Modelo 4</strong>
-                <span class="photo-preview-hint">foto-escala-cor.jpg</span>
-              </div>
-              <div class="photo-slot-caption">
-                4. Tomada de Cor (F22)
-                <span>Escala na mesma altura e código visível</span>
-              </div>
-            </div>
-          </div>
-
-          <h3>Checklist Rápido antes de liberar o paciente</h3>
-          <ol>
-            <li>Sorriso frontal e perfil estão nítidos e bem iluminados (Abertura <strong>F8</strong>)?</li>
-            <li>Na foto com afastador, os dentes estão levemente entreabertos para o protético enxergar a borda incisal?</li>
-            <li>Na foto da escala de cor (Abertura <strong>F22</strong>), a pecinha da escala está na mesma inclinação do dente e com o código (ex: A1, A2, BL2) totalmente legível?</li>
           </ol>
         `
       },
