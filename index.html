@@ -100,9 +100,7 @@
       margin-top: 2px;
     }
 
-    .search-wrapper {
-      position: relative;
-    }
+    .search-wrapper { position: relative; }
 
     .search-box { 
       width: 100%; 
@@ -242,9 +240,7 @@
       line-height: 1.3;
     }
 
-    .tutorial-body {
-      padding: 36px 40px;
-    }
+    .tutorial-body { padding: 36px 40px; }
 
     /* Player de Vídeo Tech */
     .video-container { 
@@ -360,6 +356,144 @@
     .steps-content ul { margin-left: 20px; margin-bottom: 20px; }
     .steps-content ul li { margin-bottom: 8px; }
 
+    /* ==========================================
+       PAINEL DE CÂMERA (BOTÕES TECH) & FOTOS MODELO
+       ========================================== */
+    .camera-dial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 16px 0 32px;
+    }
+
+    .camera-btn-card {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 14px;
+      padding: 18px 16px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .camera-btn-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--cyan);
+      box-shadow: 0 12px 24px -4px rgba(6, 182, 212, 0.25);
+    }
+
+    .camera-btn-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .camera-btn-value {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #38bdf8;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 6px 18px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      text-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+    }
+
+    .camera-btn-sub {
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      display: block;
+      line-height: 1.35;
+    }
+
+    /* Galeria de Fotos Modelo */
+    .photo-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      margin: 18px 0 28px;
+    }
+
+    .photo-slot-card {
+      background: #f8fafc;
+      border: 2px dashed #93c5fd;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+
+    .photo-slot-card:hover {
+      border-color: var(--primary);
+      background: #f0f9ff;
+      transform: translateY(-2px);
+    }
+
+    .photo-preview-box {
+      height: 175px;
+      background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+      color: #1e40af;
+      position: relative;
+    }
+
+    .photo-preview-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .photo-preview-icon {
+      font-size: 2rem;
+      margin-bottom: 6px;
+    }
+
+    .photo-preview-hint {
+      font-size: 0.75rem;
+      color: #3b82f6;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    .photo-slot-caption {
+      padding: 12px 14px;
+      background: #ffffff;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    .photo-slot-caption span {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
     /* Caixas de Alerta Tech */
     .alert-box { 
       background: linear-gradient(90deg, #fffbeb 0%, #fef3c7 100%); 
@@ -447,16 +581,6 @@
       border-radius: 6px;
       font-size: 0.8rem;
     }
-
-    .highlight-blue {
-      display: inline-block;
-      background: #e0e7ff;
-      color: #4338ca;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 0.8rem;
-    }
   </style>
 </head>
 <body>
@@ -535,12 +659,12 @@
                 </tr>
                 <tr>
                   <td><strong>Dra. Doris</strong></td>
-                  <td>Seg a Qui: 08:30 às 16:00<br>Sexta: 13:30 às 16:00</td>
+                  <td>Segunda a Sexta<br>08:30 às 16:00</td>
                   <td>11:30 às 13:30</td>
                   <td><span class="room-pill">Sala 1204</span></td>
                   <td>Manutenção ortodôntica, clínico geral, avaliação de ortodontia.</td>
                   <td>A partir de 4 anos</td>
-                  <td><span class="highlight-blue">Sexta à tarde: APENAS Invisalign</span></td>
+                  <td>—</td>
                 </tr>
                 <tr>
                   <td><strong>Dr. Roberto</strong></td>
@@ -804,25 +928,106 @@
         `
       },
 
-      // 5. CLÍNICO E PRÓTESE
+      // 5. CLÍNICO E PRÓTESE (SEM VÍDEO + BOTÕES DE CÂMERA + FOTOS MODELO)
       {
         id: "fotos-protetico",
         categoria: "📸 Clínico e Prótese",
-        titulo: "Padrão de fotografia e configurações da câmera (Fotos pro Protético)",
-        videoUrl: "",
+        titulo: "Padrão de Fotografia e Configurações da Câmera (Protético)",
+        semVideo: true,
         conteudo: `
-          <h3>Configurações Padrão da Câmera</h3>
+          <h3>🎛️ Painel de Configuração Rápida da Câmera</h3>
+          <p style="margin-bottom: 12px;">Antes de iniciar as fotos, ajuste os botões da câmera exatamente nestes parâmetros:</p>
+          
+          <div class="camera-dial-grid">
+            <div class="camera-btn-card">
+              <span class="camera-btn-label">Modo no Dial</span>
+              <div class="camera-btn-value">M</div>
+              <span class="camera-btn-sub">Modo Manual</span>
+            </div>
+            <div class="camera-btn-card">
+              <span class="camera-btn-label">Velocidade (Shutter)</span>
+              <div class="camera-btn-value">1/125</div>
+              <span class="camera-btn-sub">ou <strong>1/160</strong></span>
+            </div>
+            <div class="camera-btn-card">
+              <span class="camera-btn-label">Abertura (Diafragma)</span>
+              <div class="camera-btn-value">F22 / F8</div>
+              <span class="camera-btn-sub"><strong>F22</strong> Intraoral (Cor)<br><strong>F8</strong> Rosto / Sorriso</span>
+            </div>
+            <div class="camera-btn-card">
+              <span class="camera-btn-label">Sensibilidade ISO</span>
+              <div class="camera-btn-value">100</div>
+              <span class="camera-btn-sub">ou <strong>200</strong> (Luz fixa)</span>
+            </div>
+          </div>
+
+          <h3>🖼️ Galeria de Fotos Modelo (Padrão Protético)</h3>
+          <p style="margin-bottom: 12px;">Siga exatamente os enquadramentos abaixo. <em>(Para exibir a foto real, suba a imagem no GitHub e coloque o nome do arquivo no atributo <code>src</code>)</em>:</p>
+
+          <div class="photo-gallery-grid">
+            <!-- FOTO 1 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- Quando subir a foto no GitHub, descomente a linha abaixo e troque pelo nome da foto: -->
+                <!-- <img src="foto-sorriso-frontal.jpg" alt="Sorriso Frontal"> -->
+                <div class="photo-preview-icon">📸</div>
+                <strong>Foto Modelo 1</strong>
+                <span class="photo-preview-hint">foto-sorriso-frontal.jpg</span>
+              </div>
+              <div class="photo-slot-caption">
+                1. Sorriso Frontal
+                <span>Sem afastador (espontâneo)</span>
+              </div>
+            </div>
+
+            <!-- FOTO 2 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="foto-sorriso-perfil.jpg" alt="Sorriso Perfil"> -->
+                <div class="photo-preview-icon">📸</div>
+                <strong>Foto Modelo 2</strong>
+                <span class="photo-preview-hint">foto-sorriso-perfil.jpg</span>
+              </div>
+              <div class="photo-slot-caption">
+                2. Sorriso Perfil / 45°
+                <span>Sem afastador (volume labial)</span>
+              </div>
+            </div>
+
+            <!-- FOTO 3 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="foto-afastador.jpg" alt="Com Afastador"> -->
+                <div class="photo-preview-icon">🦷</div>
+                <strong>Foto Modelo 3</strong>
+                <span class="photo-preview-hint">foto-afastador.jpg</span>
+              </div>
+              <div class="photo-slot-caption">
+                3. Frontal com Afastador
+                <span>Dentes levemente entreabertos</span>
+              </div>
+            </div>
+
+            <!-- FOTO 4 -->
+            <div class="photo-slot-card">
+              <div class="photo-preview-box">
+                <!-- <img src="foto-escala-cor.jpg" alt="Tomada de Cor"> -->
+                <div class="photo-preview-icon">🎨</div>
+                <strong>Foto Modelo 4</strong>
+                <span class="photo-preview-hint">foto-escala-cor.jpg</span>
+              </div>
+              <div class="photo-slot-caption">
+                4. Tomada de Cor (F22)
+                <span>Escala na mesma altura e código visível</span>
+              </div>
+            </div>
+          </div>
+
+          <h3>Checklist Rápido antes de liberar o paciente</h3>
           <ol>
-            <li><strong>Modo da Câmera:</strong> Manual (M)</li>
-            <li><strong>Velocidade (Shutter):</strong> 1/125 ou 1/160</li>
-            <li><strong>Abertura (F):</strong> F22 (para fotos intraorais com tomada de cor) e F8 (para rosto/sorriso)</li>
-            <li><strong>ISO:</strong> 100 ou 200</li>
-          </ol>
-          <h3>Sequência de Fotos para o Protético</h3>
-          <ol>
-            <li>Sorriso frontal e perfil (sem afastador).</li>
-            <li>Frontal com afastador (dentes entreabertos para ver borda incisal).</li>
-            <li>Foto com a escala de cor posicionada na mesma altura e inclinação do dente (com numeração da escala visível!).</li>
+            <li>Sorriso frontal e perfil estão nítidos e bem iluminados (Abertura <strong>F8</strong>)?</li>
+            <li>Na foto com afastador, os dentes estão levemente entreabertos para o protético enxergar a borda incisal?</li>
+            <li>Na foto da escala de cor (Abertura <strong>F22</strong>), a pecinha da escala está na mesma inclinação do dente e com o código (ex: A1, A2, BL2) totalmente legível?</li>
           </ol>
         `
       },
